@@ -1,0 +1,7 @@
+<p *ngIf="authService.user()">{{ authService.user()?.email }}</p>
+<p *ngIf="!authService.user()">No User Logged in</p>
+<p>{{ loginService.status() }}</p>
+<p>{{ registerService.status() }}</p>
+<a [routerLink]="['/auth/register']">Register</a>
+<br />
+<a [routerLink]="['/auth/login']">Log in</a>
